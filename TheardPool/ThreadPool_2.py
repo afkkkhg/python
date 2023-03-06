@@ -20,7 +20,7 @@ number_queue.put(20)
 number_queue.put(30)
 number_queue.put(40)
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+with concurrent.futures.ThreadPoo(max_workers=4) as executor:
     futures = [executor.submit(display_divisors, number_queue.get()) for _ in range(number_queue.qsize())]
 
     concurrent.futures.wait(futures)
